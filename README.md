@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07080a,50:00b4cc,100:00e5ff&height=200&section=header&text=🐱%20MeowLang&fontSize=60&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Linguagem%20Esotérica%20Felina%20%7C%20Analisador%20Léxico%20%7C%20Linguagens%20Formais&descAlignY=62&descSize=14&descColor=b0f0ff"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07080a,50:00b4cc,100:00e5ff&height=200&section=header&text=🐱%20MeowLang&fontSize=60&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Linguagem%20Esotérica%20Felina%20%7C%20Analisador%20Léxico%20%7C%20Linguagens%20Formais&descAlignY=62&descSize=14&descColor=e0b0ff"/>
 
 </div>
 
@@ -341,11 +341,11 @@ gatil Gato {
 
 **💻 Local:**
 ```bash
-git clone https://github.com/seu-grupo/meowlang.git
+git clone [https://github.com/b3ery/MeowLang.git]
 cd meowlang
 
 # Abra o arquivo no navegador
-open meowlang.html
+open index.html
 # ou arraste o arquivo para o navegador
 ```
 
@@ -359,7 +359,7 @@ open meowlang.html
 
 ```
 meowlang/
-├── meowlang.html                    # Implementação completa
+├── index.html                    # Implementação completa
 ├── pesquisa_analisador_lexico.pdf   # Pesquisa teórica (item 1)
 └── README.md                        # Este arquivo
 ```
