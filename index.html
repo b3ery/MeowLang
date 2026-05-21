@@ -17,8 +17,6 @@ body{background:var(--bg);color:var(--cream);font-family:'Inconsolata',monospace
   min-height:100vh;padding-bottom:60px;
   background-image:radial-gradient(ellipse at 10% 20%,#00e5ff08 0%,transparent 50%),
                    radial-gradient(ellipse at 90% 80%,#ff4fa308 0%,transparent 50%);}
-
-/* HEADER */
 header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 32px;
   display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100;box-shadow:0 4px 40px #00000080;}
 .logo{font-family:'VT323',monospace;font-size:2.6rem;color:var(--accent);line-height:1;
@@ -27,19 +25,13 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .htitle h1{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:900;color:var(--cream);letter-spacing:-1px;}
 .htitle h1 span{color:var(--accent);}
 .htitle p{font-size:.62rem;color:var(--muted);letter-spacing:3px;text-transform:uppercase;margin-top:3px;}
-
-/* LAYOUT — coluna única centralizada */
 .container{max-width:900px;margin:0 auto;padding:24px 16px 0;}
-
-/* PANEL */
 .panel{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:18px;}
 .ph{background:var(--surface);border-bottom:1px solid var(--border);padding:9px 16px;
   display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:.72rem;
   font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
 .dr{background:#ff5555}.dy{background:#ffd700}.dg{background:#00ff88}
-
-/* TABS */
 .tabs{display:flex;border-bottom:1px solid var(--border);background:var(--surface);flex-wrap:wrap;}
 .tab{padding:8px 14px;font-family:'Syne',sans-serif;font-size:.62rem;font-weight:800;
   letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);cursor:pointer;
@@ -48,24 +40,18 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:1
 .tab.active{color:var(--accent);border-bottom-color:var(--accent);}
 .tab-content{display:none;}
 .tab-content.active{display:block;}
-
-/* GRAMMAR GRID */
 .grammar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:12px;}
 @media(max-width:600px){.grammar-grid{grid-template-columns:1fr 1fr;}}
 .grammar-item{background:#0a0c10;border:1px solid var(--border);border-radius:6px;padding:8px 10px;position:relative;}
 .grammar-item .kw{color:var(--orange);font-family:'VT323',monospace;font-size:1rem;display:block;margin-bottom:1px;}
 .grammar-item .eq{color:var(--muted);font-size:.66rem;}
 .grammar-item .ic{position:absolute;top:8px;right:8px;font-size:.95rem;}
-
-/* ASCII */
 .ascii-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:4px;padding:10px;max-height:180px;overflow-y:auto;}
 .ascii-cell{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 5px;text-align:center;cursor:pointer;transition:all .15s;}
 .ascii-cell:hover{border-color:var(--accent);background:var(--dim);}
 .ascii-cell .ac{font-family:'VT323',monospace;font-size:1.2rem;color:var(--accent);display:block;line-height:1;}
 .ascii-cell .ad{color:var(--yellow);font-size:.6rem;}
 .ascii-cell .ab{color:var(--muted);font-size:.55rem;}
-
-/* EDITOR */
 .editor-wrap{display:flex;}
 .gutter{background:#0a0c10;border-right:1px solid var(--border);padding:14px 8px;
   font-family:'VT323',monospace;font-size:1.05rem;color:#1e2433;line-height:1.65;
@@ -74,16 +60,12 @@ textarea{flex:1;background:transparent;border:none;outline:none;color:var(--crea
   font-family:'VT323',monospace;font-size:1.05rem;line-height:1.65;
   padding:14px;resize:vertical;min-height:260px;letter-spacing:.5px;}
 textarea::placeholder{color:#1e2433;}
-
-/* EXAMPLES */
 .ex-bar{padding:8px 12px;border-top:1px solid var(--border);background:#0a0c10;
   display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
 .ex-label{font-size:.6rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
 .ex-btn{background:var(--surface);border:1px solid var(--border);color:var(--accent);
   font-family:'Inconsolata',monospace;font-size:.7rem;padding:2px 8px;border-radius:4px;cursor:pointer;transition:all .15s;}
 .ex-btn:hover{background:var(--accent);color:#000;}
-
-/* RUN BUTTON */
 .run-wrap{padding:10px 12px;border-top:1px solid var(--border);}
 .run-btn{width:100%;background:transparent;border:1px solid var(--accent);color:var(--accent);
   font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;letter-spacing:3px;
@@ -91,22 +73,16 @@ textarea::placeholder{color:#1e2433;}
   text-shadow:0 0 10px var(--accent);box-shadow:0 0 18px var(--dim),inset 0 0 18px var(--dim);}
 .run-btn:hover{background:var(--accent);color:#000;text-shadow:none;box-shadow:0 0 36px var(--accent);}
 .run-btn:disabled{opacity:.5;cursor:not-allowed;}
-
-/* OUTPUT */
 .output-area{padding:16px;min-height:300px;font-size:.83rem;line-height:1.85;overflow-y:auto;}
 .placeholder-out{display:flex;flex-direction:column;align-items:center;justify-content:center;
   min-height:220px;color:var(--muted);gap:10px;text-align:center;}
 .placeholder-out .big{font-family:'VT323',monospace;font-size:2.2rem;color:#1e2433;}
-
-/* LEX SECTIONS */
 .lex-section{font-family:'Syne',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:2.5px;
   text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);
   padding-bottom:5px;margin:16px 0 8px;display:flex;align-items:center;gap:8px;}
 .lex-section:first-child{margin-top:0;}
 .lex-count{margin-left:auto;background:var(--surface);border:1px solid var(--border);
   border-radius:8px;padding:1px 7px;font-size:.62rem;color:var(--accent);}
-
-/* TOKEN BADGES */
 .token-stream{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;}
 .tok{font-family:'VT323',monospace;font-size:1rem;padding:2px 7px;border-radius:3px;cursor:default;transition:transform .1s;}
 .tok:hover{transform:translateY(-2px);}
@@ -119,8 +95,6 @@ textarea::placeholder{color:#1e2433;}
 .tok-delim {background:#ffffff0a;color:#aaa;border:1px solid #333;}
 .tok-cmt   {background:#55555518;color:#666;border:1px solid #2a2a2a;font-style:italic;}
 .tok-err   {background:#ff444418;color:var(--red);border:1px solid #ff444444;}
-
-/* CONSOLE */
 .console-box{background:#0a0c10;border:1px solid var(--green);border-radius:8px;padding:14px 16px;
   font-family:'VT323',monospace;font-size:1.05rem;line-height:1.9;min-height:50px;
   box-shadow:0 0 20px #00ff8818,inset 0 0 20px #00ff8808;}
@@ -128,37 +102,30 @@ textarea::placeholder{color:#1e2433;}
 .console-sys{color:var(--muted);font-size:.85rem;}
 .console-err{color:var(--red);}
 .console-fn {color:var(--accent);font-style:italic;}
-
-/* DATA TABLE */
 .data-table{width:100%;border-collapse:collapse;font-size:.78rem;}
 .data-table th{background:var(--surface);color:var(--accent);font-family:'Syne',sans-serif;
   font-weight:800;font-size:.63rem;text-transform:uppercase;letter-spacing:1.5px;
   padding:7px 10px;text-align:left;border-bottom:1px solid var(--border);}
 .data-table td{padding:6px 10px;border-bottom:1px solid #0f1117;font-family:'Inconsolata',monospace;vertical-align:middle;}
 .data-table tr:hover td{background:#ffffff04;}
-
-/* STATS */
+.type-badge{display:inline-block;padding:1px 8px;border-radius:4px;font-family:'Syne',sans-serif;font-weight:800;font-size:.68rem;}
 .stats-row{display:flex;border-top:1px solid var(--border);background:var(--surface);
   border-radius:0 0 10px 10px;overflow:hidden;flex-wrap:wrap;}
 .stat{flex:1;padding:8px 10px;border-right:1px solid var(--border);text-align:center;min-width:60px;}
 .stat:last-child{border-right:none;}
 .stat .n{display:block;font-family:'Syne',sans-serif;font-weight:900;font-size:1rem;color:var(--accent);}
 .stat .l{font-size:.55rem;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
-
+.empty-msg{color:var(--muted);font-size:.8rem;padding:6px 0;font-style:italic;}
 @keyframes shake{
-  0%,100%{transform:translateX(0)}
-  20%{transform:translateX(-8px) rotate(-3deg)}
-  40%{transform:translateX(8px) rotate(3deg)}
-  60%{transform:translateX(-6px) rotate(-2deg)}
-  80%{transform:translateX(6px) rotate(2deg)}
-}
+  0%,100%{transform:translateX(0)}20%{transform:translateX(-8px) rotate(-3deg)}
+  40%{transform:translateX(8px) rotate(3deg)}60%{transform:translateX(-6px) rotate(-2deg)}
+  80%{transform:translateX(6px) rotate(2deg)}}
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:#0a0c10;}
 ::-webkit-scrollbar-thumb{background:#1e2433;border-radius:2px;}
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo">🐱</div>
   <div class="htitle">
@@ -166,10 +133,7 @@ textarea::placeholder{color:#1e2433;}
     <p>Linguagem Esotérica Felina — Analisador Léxico</p>
   </div>
 </header>
-
 <div class="container">
-
-  <!-- GRAMÁTICA -->
   <div class="panel">
     <div class="ph"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>&nbsp;📚 Gramática MeowLang</div>
     <div class="tabs">
@@ -207,8 +171,6 @@ textarea::placeholder{color:#1e2433;}
       <div class="ascii-grid" id="ascii-grid"></div>
     </div>
   </div>
-
-  <!-- EDITOR -->
   <div class="panel">
     <div class="ph"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>&nbsp;🐱 Código MeowLang</div>
     <div class="editor-wrap">
@@ -232,8 +194,6 @@ textarea::placeholder{color:#1e2433;}
       <button class="run-btn" id="run-btn" onclick="analisar()">▶ EXECUTAR — MEOW!</button>
     </div>
   </div>
-
-  <!-- OUTPUT -->
   <div class="panel">
     <div class="ph"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>&nbsp;🔍 Análise Léxica</div>
     <div class="output-area" id="output">
@@ -253,43 +213,25 @@ textarea::placeholder{color:#1e2433;}
       <div class="stat"><span class="n" id="st-err">0</span><span class="l">erros</span></div>
     </div>
   </div>
-
-</div><!-- fim container -->
-
+</div>
 <script>
 'use strict';
-
-// ═══════════════════════════════════════════
-// UTILS
-// ═══════════════════════════════════════════
 function escHtml(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function el(id){return document.getElementById(id);}
 function section(icon,label,count){
   const b=count!==''?`<span class="lex-count">${count}</span>`:'';
-  return `<div class="lex-section">${icon} ${label} ${b}</div>`;
+  return`<div class="lex-section">${icon} ${label} ${b}</div>`;
 }
-
-// ═══════════════════════════════════════════
-// GRAMÁTICA
-// ═══════════════════════════════════════════
-const PSIU_TYPES = new Set(['psiu','psiu_int','psiu_float','psiu_string','psiu_bool','psiu_lista']);
-const KEYWORDS   = new Set([...PSIU_TYPES,'ronronar','se_miar','hiss','cacar','cada_pelo','arranhar','miar','dormindo','gatil']);
-const BOOLEANS   = new Set(['ronrom','bufar']);
-const KW_ICONS   = {
-  psiu:'🧶',psiu_int:'🔢',psiu_float:'🌊',psiu_string:'💬',psiu_bool:'✅',psiu_lista:'📋',
+const PSIU_TYPES=new Set(['psiu','psiu_int','psiu_float','psiu_string','psiu_bool','psiu_lista']);
+const KEYWORDS=new Set([...PSIU_TYPES,'ronronar','se_miar','hiss','cacar','cada_pelo','arranhar','miar','dormindo','gatil']);
+const BOOLEANS=new Set(['ronrom','bufar']);
+const KW_ICONS={psiu:'🧶',psiu_int:'🔢',psiu_float:'🌊',psiu_string:'💬',psiu_bool:'✅',psiu_lista:'📋',
   ronronar:'🐾',se_miar:'😸',hiss:'😾',cacar:'😹',cada_pelo:'🐱',arranhar:'🎯',
-  miar:'📢',dormindo:'😴',gatil:'🏠',ronrom:'😻',bufar:'🙀',
-};
-const TOK_CLASS = {
-  KEYWORD:'tok-kw',IDENTIFICADOR:'tok-id',STRING:'tok-str',NUMERO:'tok-num',
-  OPERADOR:'tok-op',BOOLEAN:'tok-bool',DELIMITADOR:'tok-delim',COMENTARIO:'tok-cmt',ERRO:'tok-err',
-};
+  miar:'📢',dormindo:'😴',gatil:'🏠',ronrom:'😻',bufar:'🙀'};
+const TOK_CLASS={KEYWORD:'tok-kw',IDENTIFICADOR:'tok-id',STRING:'tok-str',NUMERO:'tok-num',
+  OPERADOR:'tok-op',BOOLEAN:'tok-bool',DELIMITADOR:'tok-delim',COMENTARIO:'tok-cmt',ERRO:'tok-err'};
 
-// ═══════════════════════════════════════════
-// TOKENIZER
-// ═══════════════════════════════════════════
 function isWordChar(ch){return /[a-zA-Z0-9_]/.test(ch??'');}
-
 function tokenize(src){
   const tokens=[],removed=[],errors=[];
   let i=0,line=1;
@@ -302,17 +244,14 @@ function tokenize(src){
     if(ch==='/'&&src[i+1]==='*'){
       let v='',sl=line;i+=2;
       while(i<src.length&&!(src[i]==='*'&&src[i+1]==='/')){if(src[i]==='\n')line++;v+=src[i++];}
-      i+=2;removed.push({type:'COMENTARIO',value:'/*'+v+'*/',line:sl});continue;
-    }
+      i+=2;removed.push({type:'COMENTARIO',value:'/*'+v+'*/',line:sl});continue;}
     if(ch==='"'||ch==="'"){
       const q=ch;let v=q;i++;
       while(i<src.length&&src[i]!==q){if(src[i]==='\n')line++;v+=src[i++];}
-      v+=q;i++;tokens.push({type:'STRING',value:v,line});continue;
-    }
+      v+=q;i++;tokens.push({type:'STRING',value:v,line});continue;}
     if(/[0-9]/.test(ch)||(ch==='.'&&/[0-9]/.test(src[i+1]??''))){
       let v='';while(i<src.length&&/[0-9.]/.test(src[i]))v+=src[i++];
-      tokens.push({type:'NUMERO',value:v,line});continue;
-    }
+      tokens.push({type:'NUMERO',value:v,line});continue;}
     const two=src.slice(i,i+2);
     if(['==','!=','<=','>=','&&','||'].includes(two)){tokens.push({type:'OPERADOR',value:two,line});i+=2;continue;}
     if('+-*/=<>!'.includes(ch)){tokens.push({type:'OPERADOR',value:ch,line});i++;continue;}
@@ -321,17 +260,13 @@ function tokenize(src){
       let v='';while(i<src.length&&isWordChar(src[i]))v+=src[i++];
       if(KEYWORDS.has(v)){tokens.push({type:'KEYWORD',value:v,line});continue;}
       if(BOOLEANS.has(v)){tokens.push({type:'BOOLEAN',value:v,line});continue;}
-      tokens.push({type:'IDENTIFICADOR',value:v,line});continue;
-    }
+      tokens.push({type:'IDENTIFICADOR',value:v,line});continue;}
     let bad='';while(i<src.length&&!/\s/.test(src[i]))bad+=src[i++];
     errors.push({type:'ERRO',value:bad,line});
   }
   return{tokens,removed,errors};
 }
 
-// ═══════════════════════════════════════════
-// VERIFICADOR SINTÁTICO
-// ═══════════════════════════════════════════
 function checkSyntax(src){
   const errs=[];
   let bd=0,pd=0,inStr=false,strCh='',strLine=0;
@@ -345,7 +280,7 @@ function checkSyntax(src){
       if(ch==='{'){bd++;continue;}
       if(ch==='}'){bd--;if(bd<0){errs.push({line:ln,msg:`'}' sem abertura correspondente`});bd=0;}continue;}
       if(ch==='('){pd++;continue;}
-      if(ch===')'){pd--;if(pd<0){errs.push({line:ln,msg:`')' sem parêntese de abertura correspondente`});pd=0;}continue;}
+      if(ch===')'){pd--;if(pd<0){errs.push({line:ln,msg:`')' sem parêntese de abertura`});pd=0;}continue;}
     }
   });
   if(inStr)errs.push({line:strLine,msg:`string aberta com '${strCh}' nunca foi fechada`});
@@ -354,34 +289,25 @@ function checkSyntax(src){
   return errs;
 }
 
-// ═══════════════════════════════════════════
-// INTERPRETADOR
-// ═══════════════════════════════════════════
-function interpretCommands(tokens, vars, fns, classes){
+function interpretCommands(tokens,vars,fns,classes){
   const output=[];
-  if(!vars)    vars={};
-  if(!fns)     fns={};
-  if(!classes) classes={};
+  if(!vars)vars={};if(!fns)fns={};if(!classes)classes={};
 
   function resolveValue(tks,idx){
     const t=tks[idx];
     if(!t)return{val:null,next:idx};
-    if(t.type==='STRING') return{val:t.value.slice(1,-1),next:idx+1};
-    if(t.type==='NUMERO') return{val:parseFloat(t.value),next:idx+1};
+    if(t.type==='STRING')return{val:t.value.slice(1,-1),next:idx+1};
+    if(t.type==='NUMERO')return{val:parseFloat(t.value),next:idx+1};
     if(t.type==='BOOLEAN')return{val:t.value==='ronrom',next:idx+1};
     if(t.type==='KEYWORD'&&t.value==='dormindo')return{val:null,next:idx+1};
     if(t.type==='IDENTIFICADOR'){
       let val=vars[t.value]??`[${t.value} não definido]`;
       let next=idx+1;
-      // encadeamento +
       while(tks[next]?.type==='OPERADOR'&&tks[next]?.value==='+'){
-        next++;
-        const r=resolveValue(tks,next);
+        next++;const r=resolveValue(tks,next);
         val=(typeof val==='number'&&typeof r.val==='number')?val+r.val:String(val)+String(r.val);
-        next=r.next;
-      }
-      return{val,next};
-    }
+        next=r.next;}
+      return{val,next};}
     return{val:t.value,next:idx+1};
   }
 
@@ -391,17 +317,14 @@ function interpretCommands(tokens, vars, fns, classes){
     if(op?.type==='OPERADOR'&&['==','!=','<','>','<=','>='].includes(op.value)){
       const{val:b,next:n2}=resolveValue(tks,next+1);
       const r=op.value==='=='?val==b:op.value==='!='?val!=b:op.value==='<'?val<b:op.value==='>'?val>b:op.value==='<='?val<=b:val>=b;
-      return{val:r,next:n2};
-    }
+      return{val:r,next:n2};}
     if(op?.type==='OPERADOR'&&['+','-','*','/'].includes(op.value)){
       const{val:b,next:n2}=resolveValue(tks,next+1);
       const a=parseFloat(val),nb=parseFloat(b);
       if(!isNaN(a)&&!isNaN(nb)){
         const r=op.value==='+'?a+nb:op.value==='-'?a-nb:op.value==='*'?a*nb:a/nb;
-        return{val:r,next:n2};
-      }
-      return{val:String(val)+String(b),next:n2};
-    }
+        return{val:r,next:n2};}
+      return{val:String(val)+String(b),next:n2};}
     return{val,next};
   }
 
@@ -410,22 +333,18 @@ function interpretCommands(tokens, vars, fns, classes){
     while(ci<tks.length&&depth>0){
       if(tks[ci]?.value==='{')depth++;
       else if(tks[ci]?.value==='}'){depth--;if(depth===0){ci++;break;}}
-      if(depth>0)block.push(tks[ci]);
-      ci++;
-    }
+      if(depth>0)block.push(tks[ci]);ci++;}
     return{block,end:ci};
   }
 
   function collectCond(tks,startIdx){
-    // startIdx aponta para o '(' ou para o primeiro token da condição
     let ci=startIdx;
     if(tks[ci]?.value==='(')ci++;
     const condToks=[];let pd=0;
     while(ci<tks.length){
       if(tks[ci]?.value==='('){pd++;condToks.push(tks[ci]);ci++;continue;}
       if(tks[ci]?.value===')'){if(pd===0){ci++;break;}pd--;condToks.push(tks[ci]);ci++;continue;}
-      condToks.push(tks[ci]);ci++;
-    }
+      condToks.push(tks[ci]);ci++;}
     return{condToks,end:ci};
   }
 
@@ -433,14 +352,13 @@ function interpretCommands(tokens, vars, fns, classes){
     const resolved=condToks.map(tk=>{
       if(tk.type!=='IDENTIFICADOR'||vars[tk.value]===undefined)return tk;
       const v=vars[tk.value];
-      if(typeof v==='number') return{...tk,type:'NUMERO',value:String(v)};
+      if(typeof v==='number')return{...tk,type:'NUMERO',value:String(v)};
       if(typeof v==='boolean')return{...tk,type:'BOOLEAN',value:v?'ronrom':'bufar'};
       return{...tk,type:'STRING',value:`"${v}"`};
     });
     return resolveExpr(resolved,0).val;
   }
 
-  // resolve args de chamada de função: (a, b, c)
   function collectArgs(tks,startIdx){
     let ci=startIdx;
     if(tks[ci]?.value==='(')ci++;
@@ -449,8 +367,7 @@ function interpretCommands(tokens, vars, fns, classes){
       if(tks[ci]?.value==='('){pd++;current.push(tks[ci]);ci++;continue;}
       if(tks[ci]?.value===')'){if(pd===0){if(current.length)args.push(current);ci++;break;}pd--;current.push(tks[ci]);ci++;continue;}
       if(tks[ci]?.value===','&&pd===0){if(current.length)args.push(current);current=[];ci++;continue;}
-      current.push(tks[ci]);ci++;
-    }
+      current.push(tks[ci]);ci++;}
     return{args,end:ci};
   }
 
@@ -458,7 +375,6 @@ function interpretCommands(tokens, vars, fns, classes){
   while(i<tokens.length){
     const t=tokens[i];
 
-    // ── psiu / psiu_int / psiu_float / psiu_string / psiu_bool / psiu_lista
     if(t.type==='KEYWORD'&&PSIU_TYPES.has(t.value)){
       const name=tokens[i+1],eq=tokens[i+2];
       if(name?.type==='IDENTIFICADOR'&&eq?.value==='='){
@@ -469,13 +385,10 @@ function interpretCommands(tokens, vars, fns, classes){
         else if(t.value==='psiu_string'){val=String(val??'');}
         else if(t.value==='psiu_bool'){typeof val!=='boolean'&&(typeErr=`psiu_bool espera ronrom ou bufar, recebeu "${val}"`);}
         else if(t.value==='psiu_lista'){if(!Array.isArray(val))val=[];}
-        if(typeErr){output.push({type:'err',text:`⚠️ Erro de tipo — ${typeErr}`});}
+        if(typeErr)output.push({type:'err',text:`⚠️ Erro de tipo — ${typeErr}`});
         else{vars[name.value]=val;output.push({type:'sys',text:`${KW_ICONS[t.value]||'🧶'} ${t.value} ${name.value} = ${JSON.stringify(val)}`});}
-        i=next;continue;
-      }
-    }
+        i=next;continue;}}
 
-    // ── miar(...)
     if(t.type==='KEYWORD'&&t.value==='miar'){
       let cur=i+1;
       if(tokens[cur]?.value==='(')cur++;
@@ -483,54 +396,40 @@ function interpretCommands(tokens, vars, fns, classes){
       let result=String(val??''),c=n2;
       while(tokens[c]?.value==='+'){c++;const{val:v2,next:n3}=resolveValue(tokens,c);result+=String(v2??'');c=n3;}
       if(tokens[c]?.value===')')c++;
-      output.push({type:'out',text:result});
-      i=c;continue;
-    }
+      output.push({type:'out',text:result});i=c;continue;}
 
-    // ── se_miar (cond) { ... } hiss { ... }
     if(t.type==='KEYWORD'&&t.value==='se_miar'){
       const{condToks,end:afterCond}=collectCond(tokens,i+1);
       const cond=evalCond(condToks);
       let cn=afterCond;
       if(tokens[cn]?.value==='{')cn++;
-      const{block:thenBlock,end:afterThen}=collectBlock(tokens,cn);
-      cn=afterThen;
+      const{block:thenBlock,end:afterThen}=collectBlock(tokens,cn);cn=afterThen;
       let elseBlock=[];
       if(tokens[cn]?.type==='KEYWORD'&&tokens[cn]?.value==='hiss'){
         cn++;if(tokens[cn]?.value==='{')cn++;
-        const{block,end}=collectBlock(tokens,cn);elseBlock=block;cn=end;
-      }
+        const{block,end}=collectBlock(tokens,cn);elseBlock=block;cn=end;}
       output.push({type:'sys',text:`😸 se_miar → condição: ${cond}`});
       interpretCommands(cond?thenBlock:elseBlock,vars,fns,classes).output.forEach(l=>output.push(l));
-      i=cn;continue;
-    }
+      i=cn;continue;}
 
-    // ── cacar (cond) { ... }
     if(t.type==='KEYWORD'&&t.value==='cacar'){
       const{condToks,end:afterCond}=collectCond(tokens,i+1);
-      let cn=afterCond;
-      if(tokens[cn]?.value==='{')cn++;
+      let cn=afterCond;if(tokens[cn]?.value==='{')cn++;
       const{block:loopBlock,end:afterLoop}=collectBlock(tokens,cn);
       let iter=0;
       while(iter<50&&evalCond(condToks)){
         output.push({type:'sys',text:`😹 cacar — iteração ${iter+1}`});
-        interpretCommands(loopBlock,vars,fns,classes).output.forEach(l=>output.push(l));
-        iter++;
-      }
+        interpretCommands(loopBlock,vars,fns,classes).output.forEach(l=>output.push(l));iter++;}
       if(iter>=50)output.push({type:'sys',text:'⚠️ cacar encerrado após 50 iterações'});
-      i=afterLoop;continue;
-    }
+      i=afterLoop;continue;}
 
-    // ── cada_pelo (init; cond; incr) { ... }
     if(t.type==='KEYWORD'&&t.value==='cada_pelo'){
-      let ci=i+1;
-      if(tokens[ci]?.value==='(')ci++;
+      let ci=i+1;if(tokens[ci]?.value==='(')ci++;
       const inner=[];let pd=0;
       while(ci<tokens.length){
         if(tokens[ci]?.value==='('){pd++;inner.push(tokens[ci]);ci++;continue;}
         if(tokens[ci]?.value===')'){if(pd===0){ci++;break;}pd--;inner.push(tokens[ci]);ci++;continue;}
-        inner.push(tokens[ci]);ci++;
-      }
+        inner.push(tokens[ci]);ci++;}
       if(tokens[ci]?.value==='{')ci++;
       const{block:forBlock,end:afterFor}=collectBlock(tokens,ci);
       const parts=[[],[],[]];let pi=0;
@@ -542,100 +441,69 @@ function interpretCommands(tokens, vars, fns, classes){
       while(fi<50&&(condToks.length>0?evalCond(condToks):false)){
         output.push({type:'sys',text:`🐱 cada_pelo — iteração ${fi+1}`});
         interpretCommands(forBlock,vars,fns,classes).output.forEach(l=>output.push(l));
-        if(incrToks.length>0)interpretCommands(incrToks,vars,fns,classes);
-        fi++;
-      }
+        if(incrToks.length>0)interpretCommands(incrToks,vars,fns,classes);fi++;}
       if(fi>=50)output.push({type:'sys',text:'⚠️ cada_pelo encerrado após 50 iterações'});
       output.push({type:'sys',text:`🐱 cada_pelo — concluído (${fi} iterações)`});
-      i=afterFor;continue;
-    }
+      i=afterFor;continue;}
 
-    // ── ronronar nomeFn(params) { ... }
     if(t.type==='KEYWORD'&&t.value==='ronronar'){
       const nameToken=tokens[i+1];
       if(nameToken?.type==='IDENTIFICADOR'){
-        // coleta parâmetros
-        let ci=i+2;
-        if(tokens[ci]?.value==='(')ci++;
-        const params=[];let cur=[];let pd=0;
+        let ci=i+2;if(tokens[ci]?.value==='(')ci++;
+        const params=[];let cur=[],pd=0;
         while(ci<tokens.length){
           if(tokens[ci]?.value==='('){pd++;cur.push(tokens[ci]);ci++;continue;}
           if(tokens[ci]?.value===')'){if(pd===0){if(cur.length)params.push(cur[0]?.value);ci++;break;}pd--;cur.push(tokens[ci]);ci++;continue;}
           if(tokens[ci]?.value===','&&pd===0){if(cur.length)params.push(cur[0]?.value);cur=[];ci++;continue;}
-          cur.push(tokens[ci]);ci++;
-        }
+          cur.push(tokens[ci]);ci++;}
         if(tokens[ci]?.value==='{')ci++;
         const{block:body,end:afterFn}=collectBlock(tokens,ci);
         fns[nameToken.value]={params,body};
         output.push({type:'fn',text:`🐾 ronronar ${nameToken.value}(${params.join(', ')}) — definida`});
-        i=afterFn;continue;
-      }
-    }
+        i=afterFn;continue;}}
 
-    // ── gatil NomeClasse { ... }
     if(t.type==='KEYWORD'&&t.value==='gatil'){
       const nameToken=tokens[i+1];
       if(nameToken?.type==='IDENTIFICADOR'){
-        let ci=i+2;
-        if(tokens[ci]?.value==='{')ci++;
+        let ci=i+2;if(tokens[ci]?.value==='{')ci++;
         const{block:body,end:afterClass}=collectBlock(tokens,ci);
-        // processa métodos e atributos dentro da classe
-        const attrs={},methods={};
         const tmp=interpretCommands(body,{},{},{});
-        // atributos são vars do bloco, métodos são funções
-        Object.assign(attrs,tmp.vars);
-        Object.assign(methods,tmp.fns);
-        classes[nameToken.value]={attrs,methods};
-        output.push({type:'fn',text:`🏠 gatil ${nameToken.value} — definida (${Object.keys(attrs).length} atrib., ${Object.keys(methods).length} métodos)`});
-        i=afterClass;continue;
-      }
-    }
+        classes[nameToken.value]={attrs:{...tmp.vars},methods:{...tmp.fns}};
+        output.push({type:'fn',text:`🏠 gatil ${nameToken.value} — definida (${Object.keys(tmp.vars).length} atrib., ${Object.keys(tmp.fns).length} métodos)`});
+        i=afterClass;continue;}}
 
-    // ── chamada de função: nomeFn(args)
     if(t.type==='IDENTIFICADOR'&&fns[t.value]&&tokens[i+1]?.value==='('){
       const fn=fns[t.value];
       const{args,end:afterCall}=collectArgs(tokens,i+1);
       const fnVars={...vars};
       fn.params.forEach((p,idx)=>{
         const argToks=args[idx]||[];
-        const{val}=resolveExpr(argToks,0);
-        fnVars[p]=val;
-      });
-      output.push({type:'fn',text:`🐾 chamando ${t.value}(${fn.params.map((p,idx)=>{const{val}=resolveExpr(args[idx]||[],0);return `${p}=${JSON.stringify(val)}`;}).join(', ')})`});
+        const{val}=resolveExpr(argToks,0);fnVars[p]=val;});
+      output.push({type:'fn',text:`🐾 chamando ${t.value}(${fn.params.map((p,idx)=>{const{val}=resolveExpr(args[idx]||[],0);return`${p}=${JSON.stringify(val)}`;}).join(', ')})`});
       const ret=interpretCommands(fn.body,fnVars,fns,classes);
       ret.output.forEach(l=>output.push(l));
-      // captura arranhar como retorno
-      const arranhar=ret.output.find(l=>l.type==='sys'&&l.text.includes('arranhar →'));
-      if(arranhar){
-        const match=arranhar.text.match(/arranhar → (.+)$/);
-        if(match)output.push({type:'sys',text:`↩️ retorno de ${t.value}: ${match[1]}`});
-      }
-      i=afterCall;continue;
-    }
+      const arr=ret.output.find(l=>l.type==='sys'&&l.text.includes('arranhar →'));
+      if(arr){const m=arr.text.match(/arranhar → (.+)$/);if(m)output.push({type:'sys',text:`↩️ retorno de ${t.value}: ${m[1]}`});}
+      i=afterCall;continue;}
 
-    // ── arranhar valor
     if(t.type==='KEYWORD'&&t.value==='arranhar'){
       const{val,next}=resolveExpr(tokens,i+1);
       output.push({type:'sys',text:`🎯 arranhar → ${JSON.stringify(val)}`});
-      i=next;continue;
-    }
+      i=next;continue;}
 
     i++;
   }
   return{output,vars,fns,classes};
 }
 
-// ═══════════════════════════════════════════
 // RENDER HELPERS
-// ═══════════════════════════════════════════
 function renderTokenSection(tokens,errors){
-  if(tokens.length===0&&errors.length===0)return`<div style="color:var(--muted);font-size:.8rem">Nenhum token.</div>`;
+  if(tokens.length===0&&errors.length===0)return`<div class="empty-msg">Nenhum token.</div>`;
   const stream=[
     ...tokens.map(t=>{
       const cls=TOK_CLASS[t.type]||'tok-err';
       const icon=KW_ICONS[t.value]?KW_ICONS[t.value]+' ':'';
-      return`<span class="tok ${cls}" title="${t.type} · linha ${t.line}">${icon}${escHtml(t.value)}</span>`;
-    }),
+      return`<span class="tok ${cls}" title="${t.type} · linha ${t.line}">${icon}${escHtml(t.value)}</span>`;}),
     ...errors.map(e=>`<span class="tok tok-err" title="linha ${e.line}">⚠️ ${escHtml(e.value)}</span>`),
   ].join('');
   return`<div class="token-stream">${stream}</div>`;
@@ -652,7 +520,7 @@ function renderRemovedSection(removed){
 }
 
 function renderConsole(cmdOutput){
-  if(cmdOutput.length===0)return`<div class="console-box" style="color:#1e2433;font-family:'VT323',monospace">nenhum comando executado</div>`;
+  if(cmdOutput.length===0)return`<div class="console-box" style="color:var(--muted);font-family:'VT323',monospace">nenhum comando executado</div>`;
   const lines=cmdOutput.map(l=>{
     if(l.type==='out')return`<div class="console-out">▶ ${escHtml(String(l.text))}</div>`;
     if(l.type==='err')return`<div class="console-err">✗ ${escHtml(String(l.text))}</div>`;
@@ -664,22 +532,22 @@ function renderConsole(cmdOutput){
 
 function renderVarTable(vars){
   const entries=Object.entries(vars);
-  if(entries.length===0)return`<div style="color:#1e2433;font-size:.78rem">nenhuma variável declarada</div>`;
+  if(entries.length===0)return`<div class="empty-msg">🧶 nenhuma variável declarada no escopo raiz</div>`;
   const typeInfo=v=>{
-    if(Array.isArray(v))       return{label:'lista', color:'var(--purple)'};
-    if(typeof v==='boolean')   return{label:'bool',  color:'var(--green)'};
-    if(Number.isInteger(v))    return{label:'int',   color:'var(--accent)'};
-    if(typeof v==='number')    return{label:'float', color:'#7ecfde'};
-    if(v===null)               return{label:'null',  color:'var(--muted)'};
-    return                           {label:'string',color:'var(--accent2)'};
+    if(Array.isArray(v))     return{label:'lista', color:'var(--purple)',bg:'#c084fc22'};
+    if(typeof v==='boolean') return{label:'bool',  color:'var(--green)', bg:'#00ff8822'};
+    if(Number.isInteger(v))  return{label:'int',   color:'var(--accent)',bg:'#00e5ff22'};
+    if(typeof v==='number')  return{label:'float', color:'#7ecfde',      bg:'#7ecfde22'};
+    if(v===null)             return{label:'null',  color:'var(--muted)', bg:'#ffffff0a'};
+    return                         {label:'string',color:'var(--accent2)',bg:'#ff4fa322'};
   };
   const rows=entries.map(([k,v],idx)=>{
     const ti=typeInfo(v);
     const display=Array.isArray(v)?`[${v.join(', ')}]`:String(v??'null');
     return`<tr>
       <td style="color:var(--muted)">${idx+1}</td>
-      <td style="color:var(--accent2)">${escHtml(k)}</td>
-      <td style="color:${ti.color};font-family:'Syne',sans-serif;font-weight:700;font-size:.7rem">${ti.label}</td>
+      <td style="color:var(--accent2);font-weight:700">${escHtml(k)}</td>
+      <td><span class="type-badge" style="background:${ti.bg};color:${ti.color};border:1px solid ${ti.color}55">${ti.label}</span></td>
       <td style="color:var(--green)">${escHtml(display)}</td>
     </tr>`;
   }).join('');
@@ -688,11 +556,11 @@ function renderVarTable(vars){
 
 function renderFnTable(fns){
   const entries=Object.entries(fns);
-  if(entries.length===0)return`<div style="color:#1e2433;font-size:.78rem">nenhuma função definida</div>`;
+  if(entries.length===0)return`<div class="empty-msg">🐾 nenhuma função definida</div>`;
   const rows=entries.map(([name,fn],idx)=>`<tr>
     <td style="color:var(--muted)">${idx+1}</td>
-    <td style="color:var(--accent)">🐾 ${escHtml(name)}</td>
-    <td style="color:var(--yellow)">(${fn.params.join(', ')||'sem parâmetros'})</td>
+    <td style="color:var(--accent);font-weight:700">🐾 ${escHtml(name)}</td>
+    <td style="color:var(--yellow)">${fn.params.length?fn.params.join(', '):`<em style="color:var(--muted)">sem parâmetros</em>`}</td>
     <td style="color:var(--muted)">${fn.body.length} tokens</td>
   </tr>`).join('');
   return`<table class="data-table"><thead><tr><th>#</th><th>nome</th><th>parâmetros</th><th>corpo</th></tr></thead><tbody>${rows}</tbody></table>`;
@@ -700,12 +568,12 @@ function renderFnTable(fns){
 
 function renderClassTable(classes){
   const entries=Object.entries(classes);
-  if(entries.length===0)return`<div style="color:#1e2433;font-size:.78rem">nenhuma classe definida</div>`;
+  if(entries.length===0)return`<div class="empty-msg">🏠 nenhuma classe definida</div>`;
   const rows=entries.map(([name,cl],idx)=>`<tr>
     <td style="color:var(--muted)">${idx+1}</td>
-    <td style="color:var(--purple)">🏠 ${escHtml(name)}</td>
-    <td style="color:var(--green)">${Object.keys(cl.attrs).join(', ')||'—'}</td>
-    <td style="color:var(--accent)">${Object.keys(cl.methods).join(', ')||'—'}</td>
+    <td style="color:var(--purple);font-weight:700">🏠 ${escHtml(name)}</td>
+    <td style="color:var(--green)">${Object.keys(cl.attrs).join(', ')||`<em style="color:var(--muted)">—</em>`}</td>
+    <td style="color:var(--accent)">${Object.keys(cl.methods).join(', ')||`<em style="color:var(--muted)">—</em>`}</td>
   </tr>`).join('');
   return`<table class="data-table"><thead><tr><th>#</th><th>nome</th><th>atributos</th><th>métodos</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
@@ -722,9 +590,7 @@ function renderErrorScreen(title,color,label,rows){
   </div>`;
 }
 
-// ═══════════════════════════════════════════
-// LOADING LOG — 8 segundos
-// ═══════════════════════════════════════════
+// LOADING LOG
 const LOG_STEPS=[
   {delay:0,   icon:'🐱',text:'Iniciando compilador felino...'},
   {delay:600, icon:'📂',text:'Abrindo arquivo de código...'},
@@ -767,17 +633,13 @@ function showLoadingLog(onDone){
   setTimeout(()=>{out.style.minHeight='';out.style.overflowY='';onDone();},LAST_DELAY+400);
 }
 
-// ═══════════════════════════════════════════
 // ANALISAR
-// ═══════════════════════════════════════════
 function analisar(){
-  const src=el('code').value.trim();
-  if(!src)return;
+  const src=el('code').value.trim();if(!src)return;
   const btn=el('run-btn');
   btn.disabled=true;btn.textContent='🐾 Compilando...';
   const resetBtn=()=>{btn.disabled=false;btn.textContent='▶ EXECUTAR — MEOW!';};
   const showErr=html=>{el('output').innerHTML=html;el('stats').style.display='none';resetBtn();};
-
   const{tokens,removed,errors}=tokenize(src);
 
   if(errors.length>0){
@@ -787,9 +649,7 @@ function analisar(){
       <code style="background:#ff444418;padding:2px 8px;border-radius:4px;color:var(--red);font-family:'VT323',monospace">${escHtml(e.value)}</code>
       <span style="color:var(--muted);font-size:.7rem">token não reconhecido</span>
     </div>`).join('');
-    showErr(renderErrorScreen('corrija os erros léxicos e tente novamente','var(--red)',`DEBUG LÉXICO — ${errors.length} ERRO(S)`,rows));
-    return;
-  }
+    showErr(renderErrorScreen('corrija os erros léxicos e tente novamente','var(--red)',`DEBUG LÉXICO — ${errors.length} ERRO(S)`,rows));return;}
 
   const syntaxErrors=checkSyntax(src);
   if(syntaxErrors.length>0){
@@ -798,53 +658,37 @@ function analisar(){
       <span style="color:var(--orange)">→</span>
       <span style="color:var(--orange);font-size:.8rem">${escHtml(e.msg)}</span>
     </div>`).join('');
-    showErr(renderErrorScreen('corrija os erros sintáticos e tente novamente','var(--orange)',`DEBUG SINTÁTICO — ${syntaxErrors.length} ERRO(S)`,rows));
-    return;
-  }
+    showErr(renderErrorScreen('corrija os erros sintáticos e tente novamente','var(--orange)',`DEBUG SINTÁTICO — ${syntaxErrors.length} ERRO(S)`,rows));return;}
 
   showLoadingLog(()=>{
     const{output:cmdOutput,vars,fns,classes}=interpretCommands(tokens);
-    const hasCmd=tokens.some(t=>t.type==='KEYWORD');
-    const hasFns=Object.keys(fns).length>0;
-    const hasCls=Object.keys(classes).length>0;
-
     const html=[
       section('🏷️','Tokens Identificados',tokens.length),
       renderTokenSection(tokens,errors),
       section('🗑️','Eliminados',removed.length),
       renderRemovedSection(removed),
-      ...(hasCmd?[
-        section('🐱','Console',`${cmdOutput.length} linhas`),
-        renderConsole(cmdOutput),
-        section('🧶','Tabela de Símbolos — Variáveis',Object.keys(vars).length),
-        renderVarTable(vars),
-      ]:[]),
-      ...(hasFns?[
-        section('🐾','Tabela de Símbolos — Funções',Object.keys(fns).length),
-        renderFnTable(fns),
-      ]:[]),
-      ...(hasCls?[
-        section('🏠','Tabela de Símbolos — Classes',Object.keys(classes).length),
-        renderClassTable(classes),
-      ]:[]),
+      section('🐱','Console',cmdOutput.length+' linhas'),
+      renderConsole(cmdOutput),
+      section('🧶','Tabela de Símbolos — Variáveis',Object.keys(vars).length),
+      renderVarTable(vars),
+      section('🐾','Tabela de Símbolos — Funções',Object.keys(fns).length),
+      renderFnTable(fns),
+      section('🏠','Tabela de Símbolos — Classes',Object.keys(classes).length),
+      renderClassTable(classes),
     ].join('');
-
     el('output').innerHTML=html;
     el('stats').style.display='flex';
     el('st-tok').textContent=tokens.length;
-    el('st-kw').textContent =tokens.filter(t=>t.type==='KEYWORD').length;
-    el('st-id').textContent =tokens.filter(t=>t.type==='IDENTIFICADOR').length;
-    el('st-fn').textContent =Object.keys(fns).length;
-    el('st-cl').textContent =Object.keys(classes).length;
+    el('st-kw').textContent=tokens.filter(t=>t.type==='KEYWORD').length;
+    el('st-id').textContent=tokens.filter(t=>t.type==='IDENTIFICADOR').length;
+    el('st-fn').textContent=Object.keys(fns).length;
+    el('st-cl').textContent=Object.keys(classes).length;
     el('st-rem').textContent=removed.length;
     el('st-err').textContent=errors.length;
     resetBtn();
   });
 }
 
-// ═══════════════════════════════════════════
-// TABS
-// ═══════════════════════════════════════════
 function showTab(id){
   ['tipos','cmd','ascii'].forEach((tid,i)=>{
     document.querySelectorAll('.tab')[i].classList.toggle('active',tid===id);
@@ -852,33 +696,22 @@ function showTab(id){
   });
 }
 
-// ═══════════════════════════════════════════
-// ASCII TABLE
-// ═══════════════════════════════════════════
 (function(){
   const grid=el('ascii-grid');
   for(let c=32;c<=126;c++){
     const ch=String.fromCharCode(c);
     const bin=c.toString(2).padStart(8,'0');
     const div=document.createElement('div');
-    div.className='ascii-cell';
-    div.title=`ASCII ${c} · Binário: ${bin}`;
+    div.className='ascii-cell';div.title=`ASCII ${c} · Binário: ${bin}`;
     div.innerHTML=`<span class="ac">${c===32?'&nbsp;':escHtml(ch)}</span><span class="ad">${c}</span><span class="ab">${bin}</span>`;
-    grid.appendChild(div);
-  }
+    grid.appendChild(div);}
 })();
 
-// ═══════════════════════════════════════════
-// EDITOR
-// ═══════════════════════════════════════════
 function updateGutter(){
   const n=el('code').value.split('\n').length;
   el('gutter').textContent=Array.from({length:n},(_,i)=>i+1).join('\n');
 }
 
-// ═══════════════════════════════════════════
-// EXEMPLOS
-// ═══════════════════════════════════════════
 const EXAMPLES={
 basico:`# Programa básico MeowLang
 psiu_string nome  = "Whiskers"
@@ -894,7 +727,6 @@ se_miar (ativo == ronrom) {
 } hiss {
   miar("😴 O gato está dormindo...")
 }`,
-
 tipos:`# Tipos de variáveis no MeowLang
 psiu         livre   = "qualquer coisa"
 psiu_int     idade   = 3
@@ -907,7 +739,6 @@ miar("int:    " + idade)
 miar("float:  " + peso)
 miar("string: " + nome)
 miar("bool:   " + ativo)`,
-
 condicional:`# Condicional se_miar / hiss
 psiu_int    fome  = 8
 psiu_string humor = "neutro"
@@ -920,7 +751,6 @@ se_miar (fome > 5) {
   psiu_string humor = "feliz"
 }
 miar("Humor atual: " + humor)`,
-
 while:`# Laço cacar (while)
 psiu_int contador = 0
 psiu_int limite   = 4
@@ -930,19 +760,16 @@ cacar (contador < limite) {
   psiu_int contador = contador + 1
 }
 miar("Total de vidas: " + contador)`,
-
 for:`# Laço cada_pelo (for)
 cada_pelo (psiu_int i = 1; i < 6; psiu_int i = i + 1) {
   miar("Iteracao: " + i)
 }
 
-# Tabuada do 3
 miar("--- Tabuada do 3 ---")
 cada_pelo (psiu_int n = 1; n < 6; psiu_int n = n + 1) {
   psiu_int r = n * 3
   miar(n + " x 3 = " + r)
 }`,
-
 funcao:`# Funções com ronronar
 ronronar saudacao(nome) {
   miar("Olá, " + nome + "! Miau!")
@@ -955,10 +782,8 @@ ronronar calcular(a, b) {
   arranhar resultado
 }
 
-# Chamando as funções
 saudacao("Garfield")
 calcular(5, 3)`,
-
 classe:`# Classes com gatil
 gatil Gato {
   psiu_string nome  = "Sem nome"
@@ -971,21 +796,17 @@ gatil Gato {
   }
 }
 
-# Usando a classe
 miar("=== Gatil registrado ===")
 miar("Classe Gato criada com sucesso!")`,
-
 err_lex:`# Erro léxico — token inválido
 psiu_string nome = "Nala"
 @@@ token_invalido_aqui
 miar("Olá " + nome)`,
-
 err_sin:`# Erro sintático — bloco não fechado
 psiu_string nome = "Nala"
 se_miar (nome == "Nala") {
   miar("Olá " + nome)
 # faltou fechar a chave!`,
-
 err_tip:`# Erro de tipo
 psiu_int    correto = 10
 psiu_float  decimal = 3.14
@@ -994,7 +815,6 @@ psiu_bool   flag    = ronrom
 miar("int ok: "   + correto)
 miar("float ok: " + decimal)
 
-# erro proposital
 psiu_int errado = "isso nao e numero"`
 };
 
